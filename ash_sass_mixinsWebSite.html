@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ash_sass_mixins</title>
+    <meta name="description" content="Simplify your SCSS with powerful mixins for Flexbox layouts, Grid control utilities, and more.">
+    <meta name="keywords" content="Sass mixins, Flexbox, Grid, SCSS, CSS, layout, utility, simplify">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        .web-app {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .navgationBar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #0070f3;
+            padding: 10px 20px;
+            color: white;
+        }
+        .title {
+            margin: 0;
+            font-size: 1.5em;
+        }
+        .btns button {
+            background-color: transparent;
+            border: 1px solid white;
+            color: white;
+            padding: 5px 10px;
+            cursor: pointer;
+        }
+        .btns a {
+            color: white;
+            text-decoration: none;
+        }
+        .hero {
+            padding: 20px;
+            text-align: center;
+        }
+        .hero h1 {
+            font-size: 3em;
+            margin: 0;
+        }
+        .hero p {
+            font-size: 1.5em;
+            color: #555;
+        }
+        section {
+            margin-bottom: 40px;
+        }
+        h2 {
+            font-size: 2em;
+            border-bottom: 2px solid #ccc;
+            padding-bottom: 10px;
+        }
+        pre {
+            background-color: #f4f4f4;
+            padding: 15px;
+            border-radius: 5px;
+            font-size: 1.1em;
+            color: #000;
+        }
+        ul {
+            font-size: 1.2em;
+            list-style-type: circle;
+            padding-left: 20px;
+        }
+        footer {
+            text-align: center;
+            margin-top: 40px;
+            font-size: 1.2em;
+            color: #777;
+        }
+    </style>
+</head>
+<body>
+
+<div class="web-app">
+    <div class="navgationBar">
+        <h2 class="title">ash_sass_mixins</h2>
+        <div class="btns" style="display: flex; gap: 20px;">
+            <button>home</button>
+            <button>features</button>
+            <button>contact up</button>
+            <button>
+                <a href="https://github.com/ashrafmo-1/ash_sass_mixins" target="_blank">GIT HUB</a>
+            </button>
+        </div>
+    </div>
+    <div class="hero">
+        <header style="text-align: center; margin-bottom: 40px;">
+            <h1 style="font-size: 3em; margin: 0;">ash_sass_mixins</h1>
+            <p style="font-size: 1.5em; color: #555;">Simplify your SCSS with powerful mixins.</p>
+            <p style="font-size: 1.2em; color: #777;">v1.0.4 • Published a day ago</p>
+        </header>
+
+        <section style="margin-bottom: 40px; text-align: start">
+            <h2 style="font-size: 2em; border-bottom: 2px solid #ccc; padding-bottom: 10px;">Installation</h2>
+            <p style="font-size: 1.2em;">
+                To start using <strong>ash_sass_mixins</strong>, simply install it via npm:
+            </p>
+            <pre style="background-color: #f4f4f4; padding: 15px; border-radius: 5px; font-size: 1.1em; color: #000; display: flex; justify-content: space-between;">
+                <span>npm i ash_sass_mixins</span>
+                <button onclick="navigator.clipboard.writeText('npm i ash_sass_mixins').then(() => alert('Copied to clipboard!'));">copy</button>
+            </pre>
+        </section>
+
+        <section style="margin-bottom: 40px; text-align: start">
+            <h2 style="font-size: 2em; border-bottom: 2px solid #ccc; padding-bottom: 10px;">Usage</h2>
+            <p style="font-size: 1.2em;">
+                Import the mixins you need. For example, to import the Flex mixins:
+            </p>
+            <pre style="background-color: #f4f4f4; padding: 15px; border-radius: 5px; font-size: 1.1em; color: #000; display: flex; justify-content: space-between;">
+                <span>@use '../node_modules/ash_sass_mixins/src/flex' as *;</span>
+                <button onclick="navigator.clipboard.writeText(`@use '../node_modules/ash_sass_mixins/src/flex' as *;`).then(() => alert('Copied to clipboard!'));">copy</button>
+            </pre>
+            <p style="font-size: 1.2em;">
+                Now you can start using the mixins in your SCSS files to control layout and more:
+            </p>
+            <pre style="background-color: #f4f4f4; padding: 15px; border-radius: 5px; font-size: 1.1em; color: #000; display: flex; justify-content: space-between;">
+                <span>.container { @include flex-center; @include flex-gap(20px); }</span>
+                <button onclick="navigator.clipboard.writeText('.container { @include flex-center; @include flex-gap(20px); }').then(() => alert('Copied to clipboard!'));">copy</button>
+            </pre>
+        </section>
+
+        <section style="margin-bottom: 40px; text-align: start;">
+            <h2 style="font-size: 2em; border-bottom: 2px solid #ccc; padding-bottom: 10px;">Features</h2>
+            <ul style="font-size: 1.2em; list-style-type: circle; padding-left: 20px;">
+                <li>Sass mixins for Flexbox layouts</li>
+                <li>Grid control utilities</li>
+                <li>Saves lines of code by simplifying common patterns</li>
+                <li>Responsive and easy to integrate</li>
+            </ul>
+        </section>
+
+        <section style="margin-bottom: 40px; text-align: start">
+            <h2 style="font-size: 2em; border-bottom: 2px solid #ccc; padding-bottom: 10px;">Additional Information</h2>
+            <p style="font-size: 1.2em;">
+                This project is licensed under the MIT License - see the <a href="LICENSE" target="_blank" style="color: #0070f3; text-decoration: none;">LICENSE</a> file for details.
+            </p>
+            <p style="font-size: 1.2em;">Author: <strong>Ashraf Mohaemd</strong></p>
+            <p style="font-size: 1.2em;">
+                For any inquiries, please contact the author at <a href="https://ashraf-1.vercel.app" target="_blank" style="color: #0070f3; text-decoration: none;">ashraf-1.vercel.app</a>.
+            </p>
+            <p style="font-size: 1.2em;">
+                Repository: View the source code on <a href="https://github.com/your-repo" target="_blank" style="color: #0070f3; text-decoration: none;">GitHub</a>.
+            </p>
+            <p style="font-size: 1.2em;">© 2024 Ashraf Mohaemd. All rights reserved.</p>
+        </section>
+
+        <footer style="text-align: center; margin-top: 40px; font-size: 1.2em; color: #777;">
+            <p>Check out the <a href="https://www.npmjs.com/package/ash_sass_mixins" target="_blank" style="color: #0070f3; text-decoration: none;">NPM package</a></p>
+            <p>Contribute or view the code on <a href="https://github.com/ashrafmo-1" target="_blank" style="color: #0070f3; text-decoration: none;">GitHub</a></p>
+        </footer>
+    </div>
+
+</body>
+</html>
